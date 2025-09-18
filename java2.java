@@ -1,1 +1,24 @@
-import java.util.*;public class Main {    public static void main(String[] args) {        // Массив (список) имён        List<String> namesList = Arrays.asList("Alice", "Bob", "Charlie", "Diana", "Eve");                // Стек для хранения действий        Stack<String> actionsStack = new Stack<>();                // Добавление в стек        actionsStack.push("start");       // ["start"]        actionsStack.push("process");     // ["start", "process"]        actionsStack.push("finish");      // ["start", "process", "finish"]                // Удаление из стека        String lastAction = actionsStack.peek();  // получаем последнее действие        actionsStack.pop();                      // удаляем его из стека                System.out.println("Последнее действие: " + lastAction);        System.out.println("Количество оставшихся действий: " + actionsStack.size());        System.out.println("Список имён: " + namesList);    }}
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // РњР°СЃСЃРёРІ (СЃРїРёСЃРѕРє) С†РІРµС‚РѕРІ
+        List<String> colors = Arrays.asList("Red", "Green", "Blue", "Yellow", "Purple");
+        
+        // РЎС‚РµРє РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РєРѕРјР°РЅРґ
+        Stack<String> commands = new Stack<>();
+        
+        // Р”РѕР±Р°РІР»РµРЅРёРµ РєРѕРјР°РЅРґ РІ СЃС‚РµРє
+        commands.push("create");   // ["create"]
+        commands.push("edit");     // ["create", "edit"]
+        commands.push("delete");   // ["create", "edit", "delete"]
+        
+        // РЈРґР°Р»РµРЅРёРµ РєРѕРјР°РЅРґС‹ РёР· СЃС‚РµРєР°
+        String lastCommand = commands.peek();  // РїРѕР»СѓС‡Р°РµРј РїРѕСЃР»РµРґРЅСЋСЋ РєРѕРјР°РЅРґСѓ
+        commands.pop();                       // СѓРґР°Р»СЏРµРј РµС‘ РёР· СЃС‚РµРєР°
+        
+        System.out.println("РџРѕСЃР»РµРґРЅСЏСЏ РєРѕРјР°РЅРґР°: " + lastCommand);
+        System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РѕСЃС‚Р°РІС€РёС…СЃСЏ РєРѕРјР°РЅРґ: " + commands.size());
+        System.out.println("РЎРїРёСЃРѕРє С†РІРµС‚РѕРІ: " + colors);
+    }
+}
