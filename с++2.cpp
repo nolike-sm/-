@@ -1,1 +1,31 @@
-# Массив (список)numbers = [10, 20, 30, 40, 50]# Добавление элементаnumbers.append(60)# Доступ к элементамprint(f"Элемент с индексом 3: {numbers[3]}")# Размер массива#include <iostream>#include <vector>#include <stack>int main() {    // Массив (вектор) имён городов    std::vector<std::string> cities = {"Moscow", "Berlin", "Paris", "Tokyo", "New York"};        // Стек целых чисел для хранения оценок    std::stack<int> grades;        // Заполняем стек оценками    std::vector<int> gradeList = {5, 4, 3, 2, 1};    for (const auto& grade : gradeList) {        grades.push(grade);        std::cout << "Добавлена оценка: " << grade << std::endl;    }        // Выводим массив городов    std::cout << "\nСписок городов: ";    for (const auto& city : cities) {        std::cout << city << " ";    }        // Работа со стеком оценок    std::cout << "\n\nТекущая оценка на вершине стека: " << grades.top();    grades.pop();    std::cout << "\nКоличество оставшихся оценок: " << grades.size() << std::endl;        return 0;}
+#include <iostream>
+#include <vector>
+#include <stack>
+
+int main() {
+    // РњР°СЃСЃРёРІ (РІРµРєС‚РѕСЂ) РёРјС‘РЅ РіРѕСЂРѕРґРѕРІ
+    std::vector<std::string> cities = {"Moscow", "Berlin", "Paris", "Tokyo", "New York"};
+    
+    // РЎС‚РµРє С†РµР»С‹С… С‡РёСЃРµР» РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РѕС†РµРЅРѕРє
+    std::stack<int> grades;
+    
+    // Р—Р°РїРѕР»РЅСЏРµРј СЃС‚РµРє РѕС†РµРЅРєР°РјРё
+    std::vector<int> gradeList = {5, 4, 3, 2, 1};
+    for (const auto& grade : gradeList) {
+        grades.push(grade);
+        std::cout << "Р”РѕР±Р°РІР»РµРЅР° РѕС†РµРЅРєР°: " << grade << std::endl;
+    }
+    
+    // Р’С‹РІРѕРґРёРј РјР°СЃСЃРёРІ РіРѕСЂРѕРґРѕРІ
+    std::cout << "\nРЎРїРёСЃРѕРє РіРѕСЂРѕРґРѕРІ: ";
+    for (const auto& city : cities) {
+        std::cout << city << " ";
+    }
+    
+    // Р Р°Р±РѕС‚Р° СЃРѕ СЃС‚РµРєРѕРј РѕС†РµРЅРѕРє
+    std::cout << "\n\nРўРµРєСѓС‰Р°СЏ РѕС†РµРЅРєР° РЅР° РІРµСЂС€РёРЅРµ СЃС‚РµРєР°: " << grades.top();
+    grades.pop();
+    std::cout << "\nРљРѕР»РёС‡РµСЃС‚РІРѕ РѕСЃС‚Р°РІС€РёС…СЃСЏ РѕС†РµРЅРѕРє: " << grades.size() << std::endl;
+    
+    return 0;
+}
