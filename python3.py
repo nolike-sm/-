@@ -1,0 +1,1 @@
+# Создание массиваfruits = ["apple", "banana", "cherry"]print("Массив фруктов:", fruits)# Создание стекаstack = []stack.append("первый")stack.append("второй")stack.append("третий")# Удаление элемента из стекаremoved_element = stack.pop()  # Удаляет "третий"print("Удалённый элемент:", removed_element)print("Оставшиеся элементы в стеке:", stack)
